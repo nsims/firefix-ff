@@ -82,7 +82,7 @@ function xLogInAndRequest() {
         url: URL.xURLElement("Get", "LoginURL"),
         content : {sid : "enablon", uid : ss.storage.SWLogin, pwd : ss.storage.SWPassword, LogIn : "Log%20In"},
         onComplete : function (response) {
-            if(response.text != ""){
+            if(response.text !== ""){
             
                 /* === Check that the Login was Successful === */
                 var Request = require("request").Request;
@@ -93,7 +93,7 @@ function xLogInAndRequest() {
                         if(sContent.search("404") == -1){
                             if(sContent.search("FireFixLogged") != -1) {
                             
-            					/* === Build the Request === */
+                            /* === Build the Request === */
                                 request.xPrefillRequest(CurrentTab.url, CurrentTab.index);
                             } else {
                                 xAskForANewPassword(1);

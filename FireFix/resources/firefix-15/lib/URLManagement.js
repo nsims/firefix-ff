@@ -17,8 +17,8 @@ var sLocalHost = "localhost";
 var sVer = "ver";
 
 var sServerURL, sSoftwareSiteId;
-if(ss.storage.ServerURL === undefined || ss.storage.ServerURL == "") { sServerURL = "https://software.enablon.com"; } else { sServerURL = ss.storage.ServerURL; }
-if(ss.storage.SoftwareSiteId === undefined || ss.storage.SoftwareSiteId == "") { sSoftwareSiteId = "Software"; } else { sSoftwareSiteId = ss.storage.SoftwareSiteId; }
+if(ss.storage.ServerURL === undefined || ss.storage.ServerURL === "") { sServerURL = "https://software.enablon.com"; } else { sServerURL = ss.storage.ServerURL; }
+if(ss.storage.SoftwareSiteId === undefined || ss.storage.SoftwareSiteId === "") { sSoftwareSiteId = "Software"; } else { sSoftwareSiteId = ss.storage.SoftwareSiteId; }
 
 var sSoftwareURL = sServerURL + "/" + sSoftwareSiteId + "/";
 var sSoftwareDataURL = sSoftwareURL + sGoAspU + "/Referent/FFRq";
@@ -52,7 +52,7 @@ function xURLElement(sMode, sConstant, sValue, xSocleMode){
                 case "LocalHost": sResult = sLocalHost; break;
                 case "Ver": sResult = sVer; break;
                 
-                case "ServerURL": sResult = sServerURL; break;;
+                case "ServerURL": sResult = sServerURL; break;
                 case "SoftwareSiteId": sResult = sSoftwareSiteId; break;
                 
                 case "SoftwareURL": sResult = sSoftwareURL; break;
@@ -68,7 +68,7 @@ function xURLElement(sMode, sConstant, sValue, xSocleMode){
                 
                 case "CurrentURL": sResult = sCurrentURL; break;
                 
-                default: error("ERROR : Constant '" + sConstant + "' is undefined");
+                default: Error("ERROR : Constant '" + sConstant + "' is undefined");
             }
             break;
             
@@ -79,7 +79,7 @@ function xURLElement(sMode, sConstant, sValue, xSocleMode){
                 
                 case "CurrentURL": sCurrentURL = sValue; break;
                 
-                default: error("ERROR : Constant '" + sConstant + "' cannot be modified or is undefined");
+                default: Error("ERROR : Constant '" + sConstant + "' cannot be modified or is undefined");
             }
             if(sConstant == "ServerURL" || sConstant == "SoftwareSiteId"){
                 sSoftwareURL = sServerURL + "/" + sSoftwareSiteId + "/";
@@ -90,7 +90,7 @@ function xURLElement(sMode, sConstant, sValue, xSocleMode){
             }
             break;
             
-        default: error("ERROR : sMode invalid : " + sMode);
+        default: Error("ERROR : sMode invalid : " + sMode);
     }
     
     if(sMode == "Get") { sResult = xApplySocleMode(sResult, xSocleMode); }
@@ -129,8 +129,8 @@ function sGetSiteVersionURL(sURL, sMode, xSocleMode){
             
                 //Check for adm
                 if(typeof asURL[nMax - 1] !== "undefined"){
-            		var sCheckAdm = asURL[nMax - 1].toLowerCase();
-    				if(sCheckAdm != sAdm) { sApp = asURL[nMax - 1] }
+                    var sCheckAdm = asURL[nMax - 1].toLowerCase();
+                    if(sCheckAdm != sAdm) { sApp = asURL[nMax - 1] }
                 }
                 //If adm was found
                 if( !sApp ){
@@ -157,7 +157,7 @@ function sGetSiteVersionURL(sURL, sMode, xSocleMode){
 			break;
             
 		default:
-			error("ERROR : Mode undefined");
+			Error("ERROR : Mode undefined");
 	}
 	
     return xApplySocleMode(sResult, xSocleMode);

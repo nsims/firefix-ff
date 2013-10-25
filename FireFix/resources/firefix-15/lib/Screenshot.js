@@ -87,7 +87,7 @@ function saveCanvas(canvas, tab){
     var imageFile=fileRequire.read(FilePath, "b");
 	
     var sFileName = ss.storage.SCFileName;
-    if(sFileName == "" || sFileName == null){
+    if(sFileName === "" || sFileName === null){
         sFileName = sDefaultFileName;        
     }
     

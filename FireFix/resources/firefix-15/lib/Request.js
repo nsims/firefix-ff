@@ -48,7 +48,7 @@ function xPrefillRequest(sClickedURL, nClickedTabIndex) {
     
     for(var fld in oData) {
         var sParamValue = ss.storage[fld];
-        if( sParamValue === undefined || sParamValue == 0 || sParamValue == "" ) { oData[fld] = NaN; } else { oData[fld] = sParamValue; }
+        if( sParamValue === undefined || sParamValue === 0 || sParamValue === "" ) { oData[fld] = NaN; } else { oData[fld] = sParamValue; }
     }
     
     xRetrieveErrorMessage(nClickedTabIndex); 
@@ -94,7 +94,7 @@ function xRetrieveAppVersion() {
             oData.Fld__xml_StepsToReproduce = sBuildElementsList(oAppVersion);
             
             /* Check that the Product has been Found. If Not the User Choose in the List */
-            if(oAppVersion.sAppId == null) {
+            if(oAppVersion.sAppId === null) {
             
                 var bClosePanelAllowed = false;
                 
@@ -151,9 +151,9 @@ function sBuildElementsList(oAppVersion) {
         if(oAppVersion.sMode == 'VPACK') { sModeLabel = 'Packages'; } else { sModeLabel = 'Modules'; }
         sResult += 'List of ' + sModeLabel+ ' in the solution :\n';
         
-        asElementsList = oAppVersion.asElementsList;
+        var asElementsList = oAppVersion.asElementsList;
         for(var i = 0; i < asElementsList.length; i++) {
-            asLabel = asElementsList[i].split('¤', 1);
+            var asLabel = asElementsList[i].split('¤', 1);
             sResult += asLabel[0] + "\n";
         }
     } else {
@@ -288,7 +288,7 @@ function xConstructURL() {
     
     
     /* Build the URL */
-    sCompleteURL = URL.xURLElement("Get", "SoftwareRequestURL", null, "AddMode");
+    var sCompleteURL = URL.xURLElement("Get", "SoftwareRequestURL", null, "AddMode");
     for(var fld in oData) {
         if(bDebug) { sLogs += fld + " -> " + oData[fld] + "\n"; }
         if( "" + oData[fld] != "NaN" ) { sCompleteURL += "&" + fld + "=" + encodeURIComponent(oData[fld]); }

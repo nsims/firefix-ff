@@ -49,7 +49,7 @@ var panelMenu1 = require("panel").Panel({
     contentScriptWhen: "end",
     
     onMessage: function (defaultValues){
-        if( defaultValues != null ) {
+        if( defaultValues !== null ) {
             for(var elt in defaultValues) {
                     ss.storage[elt] = defaultValues[elt][1];
             }
@@ -85,12 +85,12 @@ var panelMenu2 = require("panel").Panel({
     contentScriptWhen: "end",
     
     onMessage: function (configuration){
-        if( configuration != null ) { 
+        if( configuration !== null ) { 
             for(var elt in configuration) {
                     ss.storage[elt] = configuration[elt][1];
             }
-            if(configuration.ServerURL[1] != "") { URL.xURLElement("Set", "ServerURL", configuration.ServerURL[1]); }
-            if(configuration.SoftwareSiteId[1] != "") { URL.xURLElement("Set", "SoftwareSiteId", configuration.SoftwareSiteId[1]); }
+            if(configuration.ServerURL[1] !== "") { URL.xURLElement("Set", "ServerURL", configuration.ServerURL[1]); }
+            if(configuration.SoftwareSiteId[1] !== "") { URL.xURLElement("Set", "SoftwareSiteId", configuration.SoftwareSiteId[1]); }
         } else {
             if(menu2CreateRequest) {
                 setMenu2CreateRequest(false);
@@ -117,10 +117,10 @@ var panelMenu2 = require("panel").Panel({
             elementsMenu2[elt][1] = ss.storage[elt];
         }
 
-        if(elementsMenu2.ServerURL[1] === undefined || elementsMenu2.ServerURL[1] == "") {
+        if(elementsMenu2.ServerURL[1] === undefined || elementsMenu2.ServerURL[1] === "") {
             elementsMenu2.ServerURL[1] = URL.xURLElement("Get", "ServerURL", null, "NormalMode");
         }
-        if(elementsMenu2.SoftwareSiteId[1] === undefined || elementsMenu2.SoftwareSiteId[1] == "") {
+        if(elementsMenu2.SoftwareSiteId[1] === undefined || elementsMenu2.SoftwareSiteId[1] === "") {
             elementsMenu2.SoftwareSiteId[1] = URL.xURLElement("Get", "SoftwareSiteId", null, "NormalMode");
         }
         panelMenu2.port.emit("configuration", elementsMenu2);

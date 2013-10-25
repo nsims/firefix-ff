@@ -32,7 +32,7 @@ function xManageDisplayMainButton(tab, bStartOfProcess, bEndOfProcess, xMainButt
             var sDomain = asURL[2];
             var asDomain = sDomain.split(".", 3);
             var sEnablon, sSoftware;
-    		if(asDomain.length > 2){
+            if(asDomain.length > 2){
 				sEnablon = asDomain[1] + "." + asDomain[2];
 				sSoftware = asURL[3];
             }
@@ -99,7 +99,7 @@ function xManageMainButton(sMode, xMainButtonEvent) {
             bEventProcessing = true;
             break;
         default:
-            error("Wrong Mode");
+            Error("Wrong Mode");
     }
 
     if(sEventAction == "ActivateEvent") {
