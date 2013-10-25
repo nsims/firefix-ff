@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+    		td label{
+				width:100px;
+				padding-right:20px
+			}
+			td input, td textarea, td select{
+				width:200px
+			}
+            .errorMsg{
+                color:red;
+                font-style:italic
+            }
+		</style>
+	</head>
+    
+    <body>
+        <center>
+            <br>
+            <div id="Pluginheader">
+                <img src="../img/Settings.gif">
+                <h1> Request Creator Configuration </h1>
+    		</div>
+            
+            <div id="SWPasswordToBeFilled" class="errorMsg"></div>
+		    <h2>Connexion</h2>
+			<div id="PluginSettings">
+			   <table>
+				<tr><td><label>Login : </label></td><td><input id="SWLogin" type="text" name="Login"></input></td></tr>
+				<tr><td><label>Password : </label></td><td><input id="SWPassword" type="password" name="Password>"></input></td></tr>
+               </table> 
+			</div>
+			<h2>Screenshot</h2>
+            <div id="ScreenshotSettings">
+               <table>
+                <tr><td><label>File Name : </label></td><td><input id="SCFileName" type="text" name="FileName" value="" /></td></tr>
+               </table> 
+			</div>
+            <h2>Software</h2>
+            <div id="SoftwareSettings">
+               <table>
+                <tr><td><label>Server URL : </label></td><td><input id="ServerURL" type="text" name="ServerURL" value="" /></td></tr>
+    			<tr><td><label>Site Id : </label></td><td><input id="SoftwareSiteId" type="text" name="SoftwareSiteId" value="" /></td></tr>
+               </table> 
+			</div>
+			<br />				
+            <input id="SWSaveConfiguration" type="button" value="Save"></input>
+            <input id="SWCancelConfiguration" type="button" value="Cancel"></input>
+        </center>
+	</body>
+</html>

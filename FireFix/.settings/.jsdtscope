@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="resources/addon-sdk/lib/sdk/frame/|resources/addon-sdk/lib/sdk/|resources/addon-sdk/lib/sdk/platform/|resources/addon-sdk/lib/sdk/loader/|resources/firefix-15/data/Menu/|resources/firefix-15/data/FireFixVersion/|resources/addon-sdk/lib/sdk/preferences/|resources/addon-sdk/lib/sdk/io/|resources/addon-sdk/lib/sdk/addon/|resources/firefix-15/data/Request/|resources/addon-sdk/lib/sdk/deprecated/events/|resources/addon-sdk/lib/sdk/deprecated/traits/|resources/addon-sdk/lib/sdk/event/|resources/addon-sdk/lib/sdk/content/|resources/addon-sdk/lib/sdk/core/|resources/addon-sdk/lib/sdk/window/|resources/addon-sdk/lib/sdk/windows/|resources/firefix-15/data/Screenshot/|resources/addon-sdk/lib/sdk/deprecated/|resources/addon-sdk/lib/toolkit/|resources/addon-sdk/lib/sdk/l10n/|resources/addon-sdk/lib/sdk/dom/|resources/addon-sdk/lib/sdk/console/|resources/addon-sdk/lib/sdk/tabs/|resources/firefix-15/lib/|resources/addon-sdk/lib/sdk/system/|defaults/preferences/|resources/addon-sdk/lib/sdk/net/|resources/addon-sdk/lib/sdk/private-browsing/|resources/addon-sdk/lib/sdk/lang/|resources/addon-sdk/lib/sdk/util/|resources/firefix-15/data/" kind="src" path=""/>
+	<classpathentry kind="src" path="defaults/preferences"/>
+	<classpathentry excluding="frame/|platform/|loader/|preferences/|io/|addon/|deprecated/events/|deprecated/traits/|event/|content/|core/|window/|windows/|deprecated/|l10n/|dom/|console/|tabs/|system/|net/|private-browsing/|lang/|util/" kind="src" path="resources/addon-sdk/lib/sdk"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/addon"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/console"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/content"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/core"/>
+	<classpathentry excluding="events/|traits/" kind="src" path="resources/addon-sdk/lib/sdk/deprecated"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/deprecated/events"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/deprecated/traits"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/dom"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/event"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/frame"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/io"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/l10n"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/lang"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/loader"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/net"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/platform"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/preferences"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/private-browsing"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/system"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/tabs"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/util"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/window"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/sdk/windows"/>
+	<classpathentry kind="src" path="resources/addon-sdk/lib/toolkit"/>
+	<classpathentry excluding="Menu/|FireFixVersion/|Request/|Screenshot/" kind="src" path="resources/firefix-15/data"/>
+	<classpathentry kind="src" path="resources/firefix-15/data/FireFixVersion"/>
+	<classpathentry kind="src" path="resources/firefix-15/data/Menu"/>
+	<classpathentry kind="src" path="resources/firefix-15/data/Request"/>
+	<classpathentry kind="src" path="resources/firefix-15/data/Screenshot"/>
+	<classpathentry kind="src" path="resources/firefix-15/lib"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

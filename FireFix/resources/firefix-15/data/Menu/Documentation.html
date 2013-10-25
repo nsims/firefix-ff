@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+        	h2{
+				border-bottom: 1px solid #AAA;
+			}
+			.version{
+				color:red;
+				font-style:italic;
+				border-bottom: none;
+			}
+            .close{
+				font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+				color:#C0C0C0;
+				padding:1px 4px 1px 4px;
+				position:fixed;
+                top:1px;
+				right:1px;
+                cursor:pointer;
+            }
+			.close:hover{
+                background-color:#C0C0C0;
+				color:#FFFFFF;
+			}
+			.menu{
+				background-color:#F0F0F0;
+				margin:5px 1px 1px 5px;
+				border: 1px solid #AAA;
+				position:absolute;
+                top:1px;
+				left:1px;
+			}
+			.menu .title{
+				text-align:center;
+				font-weight:bold;
+			}
+			.menu p{
+				margin:1px 10px 1px 10px;
+			}
+		</style>
+	</head>
+    
+    <body>
+		<p class='close'>&#10006</p>
+        
+		<div class='menu'>
+			<p class='title'>Content</p>
+			<p>1 Introduction</p>
+			<p>2 Main Menus</p>
+			<p>3 Icon Status</p>
+			<p>4 Product Selection</p>
+			<p>5 Application Server Selection</p>
+			<p>6 Limitations</p>
+			<p>7 What Next?</p>
+			<p>8 Team</p>
+		</div>
+		
+        <center>
+            <br>
+            <div id="Pluginheader">
+                <img src="../img/Settings.gif">
+                <h1>Request Creator Documentation</h1>
+				
+					<h2 class='version'>
+						<a class='version' href='#'>FireFix <span id='version'></span></a>
+					</h2>
+    		</div>
+        </center>
+		
+			<div>
+				<h2>Introduction</h2>
+				<p>FireFix is a Mozilla FireFox pluggin which allows to post requests on Software in a minimum of time and increases the quality of requests by filling often forgotten information.</p>
+				<p>In concret terms, when one finds a bug or wants to ask for an evolution, one just need to go on the relevant tab and click on FireFix's icon. At this moment FireFix:
+					<ul>
+						<li>Takes a screenshot of the whole tab</li>
+						<li>Retrieves the error message if one is displayed</li>
+						<li>Gathers all the technical information needed to fill the request (product, application server, builds, url,..)</li>
+						<li>Opens a new tab containing the prefilled request</li>
+					</ul>
+				In about 2 seconds the boring work is done, one just have to fill in the user story and the context then post the request.</p>
+				<p>The main features of Firefix will be described in the following paragraphs along with FireFix limitations and coming evolutions.</p>
+			</div>
+			<div>
+				<h2>Main Menus</h2>
+				<p>FireFix has 2 menus. The first one allows the user to define default values that will be used in priority to prefill the requests. This becomes especially useful when taking part in a X-Test.</p>
+				<p>The second menu contains the Software's login and password, it is used by FireFix when creating a request. If the password is out-of-date, Firefix detects it and asks for an update.</p>
+			</div>
+			<div>
+				<h2>Icon Status</h2>
+				<p>FireFix has different icons representing its current state. It depends on the web page currently visited and, if the web page is an Enablon application, the settings of the application.</p>
+				<ul>
+					<li><img src="../img/MainIcon.png">
+						<span>&nbsp; Enablon Application, FireFix is working.</span></li>
+					<li><img src="../img/GreyMainIcon.png">
+						<span>&nbsp; Not an Enablon Application or on Software, FireFix is deactivated.</span></li>
+					<li><img src="../img/NotLoggedIcon.png">
+						<span>&nbsp; Enablon Application BUT User not Logged, FireFix is deactivated.</span></li>
+					<li><img src="../img/NoVersionIcon.png">
+						<span>&nbsp; Enablon Application BUT Version Page not accessible or doesn't exist, FireFix is deactivated.</span></li>
+				</ul>
+			</div>
+			<div>
+				<h2>Product Selection</h2>
+				<p>In order to detect the product, FireFix uses the Package/Module/Application's label (depends on the delivery mode) and compares it to the ID of the application. This works most of the times, however it happens that the labels don't match (Ex, in the case of the Action Plans : AP != AP_Pkg).</p>
+				<p>In this case FireFix displays a popup listing the names of the differents Package/Module found and the user has to choose the one he thinks the most relevant.</p>
+			</div>
+			<div>
+				<h2>Application Server Selection</h2>
+				<p>When prefilling a request, FireFix check that the application server used in the application and the application server linked to the product found on Software are the same. If this is not the case it can have 3 causes :</p>
+				<ul>
+					<li>Software is not up to date (please contact the team responsible of the product so that they can make the necessary changes).</li>
+					<li>FireFix has found the wrong product (please send a mail to one of the members of the FireFix development team so that we can find a solution to the issue).</li>
+					<li>The product has been moved to a more recent application server.</li>
+				</ul>
+				<p>If this happens Firefix displays a popup explaining the problem and ask the user to choose the socle to be used in the request.</p>
+			</div>
+			<div>
+				<h2>Limitations</h2>
+				<p>In order to work properly FireFix needs to be executed in a specific context. This leads to some limitations.</p>
+				<ul>
+					<li>The Version Page has to be accessible to the user(Path: siteID/go.asp?u=/AppID/ver). This is where the product information is found.</li>
+					<li>FireFix is fully compatible with the following versions of the application server : 5.7SP1, 6.0-R6, 6.0-R7, Alderaan, and more recent. In the older versions, FireFix is not able to find the product no matter the application settings.</li>
+					<li>When working on the serveur dev2 with a local account, using FireFix is possible but will disconect the user from the application. This can't be avoided as FireFix needs to connect to Software in order to create the request.</li>
+				</ul>
+			</div>
+			<div>
+				<h2>What Next?</h2>
+				<p>Here is the list of the coming evolutions to be added to FireFix. It is not set in stone so feel free to contact the developer team if you have any query or evolution idea.</p>
+				<ul>
+					<li>Add more options to the Screenshot (for exemple allowing to customize it).</li>
+					<li>Add the notion of Project in FireFix (new field on the Software's request table).</li>
+					<li>Create a X-Test Mode, the user tick a box and FireFix prefill the requests in a standardized way which has to be defined.</li>
+					<li>Application Status Management, when connecting to an application, FireFix check the build of the product and warn the user if it is not up-to-date.</li>
+				</ul>
+			</div>
+			<div>
+				<h2>Team</h2>
+				<ul>
+					<li>Emmanuel D&eacute;sir - edesir@enablon.net</li>
+					<li>Olivier Convard - oconvard@enablon.net</li>
+				</ul>
+			</div>
+	</body>
+</html>

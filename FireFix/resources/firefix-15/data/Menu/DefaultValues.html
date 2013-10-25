@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+			td label{
+				width:100px;
+				padding-right:20px
+			}
+			td input, td textarea, td select{
+				width:200px;
+				margin-right:20px
+			}
+			.error {
+				background:url("../img/Error.png") no-repeat;
+				width:20px;
+				height:20px;
+				visibility:hidden
+			}
+            .errorMsg{
+                color:red;
+                font-style:italic;
+                margin-bottom:0px;
+    			visibility:hidden
+            }
+		</style>
+	</head>
+	
+    <body>
+        <center>
+            <br>
+            <div id="Pluginheader">
+                <img src="../img/Settings.gif">
+                <h1> Request Creator Configuration </h1>
+			</div>
+			
+			<div id="PluginSettings">
+                <p class="errorMsg" id="Error">Forbidden characters in Text fields</p>
+    			<table>
+    			<tr>
+    				<td><label>Prefix Name : </label></td>
+    				<td><input id="Fld__xml_Title"></input></td>
+					<td><div class="error" id="Fld__xml_Title_Error"></div></td>
+    			</tr>
+    			<tr>
+    				<td><label>Severity : </label></td>
+    				<td><select id="Fld__xml_Severity">
+                        <option value="0">&nbsp;</option>
+                        <option value="1">Severe</option>
+                        <option value="2">Major</option>
+                        <option value="3">Minor</option>
+                        </select></td>
+					<td><div class="error" id="Fld__xml_Severity_Error"></div></td>
+    			</tr>
+    			<tr>
+    				<td><label>Priority : </label></td>
+    				<td><select id="Fld__xml_Priority">
+                        <option value="0">&nbsp;</option>
+                        <option value="1">Immediate</option>
+                        <option value="2">At the earliest</option>
+                        <option value="3">Normal</option>
+                        <option value="4">Later</option>
+                        </select></td>
+					<td><div class="error" id="Fld__xml_Priority_Error"></div></td>
+    			</tr>
+        		<tr>
+    				<td><label>Keywords : </label></td>
+    				<td><input id="Fld__xml_Keywords"></input></td>
+					<td><div class="error" id="Fld__xml_Keywords_Error"></div></td>
+    			</tr>
+                <tr>
+        			<td><label>Assigned : </label></td>
+    				<td><input id="Fld__xml_Ressource"></input></td>
+					<td><div class="error" id="Fld__xml_Ressource_Error"></div></td>
+    			</tr>
+                <tr>
+        			<td><label>Actual vs expected<br>behaviour : </label></td>
+    				<td><textarea id="Fld__xml_Description"></textarea></td>
+					<td><div class="error" id="Fld__xml_Description_Error"></div></td>
+    			</tr>
+                <tr>
+            		<td><label>Steps to reproduce : </label></td>
+    				<td><textarea id="Fld__xml_StepsToReproduce"></textarea></td>
+					<td><div class="error" id="Fld__xml_StepsToReproduce_Error"></div></td>
+    			</tr>
+    			</table>
+			</div>
+			<br />
+			
+            <input id="SaveDefaultValues" type="button" value="Save"></input>
+            <input id="ResetDefaultValues" type="button" value="Reset"></input>
+            <input id="CancelDefaultValues" type="button" value="Cancel"></input>
+        </center>
+	</body>
+</html>
