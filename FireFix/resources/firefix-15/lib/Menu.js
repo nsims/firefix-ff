@@ -29,7 +29,7 @@ function addToolbarButton() {
         btn.setAttribute('id', 'reportButton'); //id de l'element
         btn.setAttribute('tooltiptext', 'Report bug'); // text on hover
         btn.setAttribute('type', 'menu-button');  //menu-button permet d'afficher la petite fleche pour le menu
-    	btn.setAttribute('class', 'toolbarbutton-1'); //permet d'encadrer le bouton
+        btn.setAttribute('class', 'toolbarbutton-1'); //permet d'encadrer le bouton
         btn.setAttribute('image', data.url('img/GreyMainIcon.png'));
     	btn.setAttribute('orient', 'horizontal');
     	btn.setAttribute('label', 'Report');
